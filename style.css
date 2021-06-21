@@ -10,24 +10,24 @@
     
     background-position: center;
     background-size: cover;
-    position: relative;
-    
+    position: relative;   
     
 }
 nav{
-    display: flex;
-    padding: 2% 6%;   
-    justify-content: space-between;
-    align-items: center;  
     
+    padding: 2% 3%;  
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;    
 }
 nav img{
-    width: 150px;   
+    width: 150px;  
 }
 .nav-links{
     flex: 1;
     text-align: right;  
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;    
+    
 }
 .nav-links ul li{
     list-style: none;
@@ -91,6 +91,7 @@ nav img{
 nav .fa{ 
     display:none;
     }
+   
 
 @media(max-width: 700px){
     .text-box h1{
@@ -100,15 +101,18 @@ nav .fa{
         display: block;   
     }
     .nav-links{
+       
         position: absolute;
         background:#f44336;
         height: 100vh;
         width: 200px;
         top: 0;
-        right: -200px;
+        right: 0px;
         text-align: left;
         z-index: 1;
         transition: 0.5s;
+        display: none;
+
     }
     nav .fa{
         display: block;
@@ -116,6 +120,7 @@ nav .fa{
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+       
     }
     .nav-links ul{
         padding: 30px;
