@@ -5,39 +5,50 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital@1&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/regular.min.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/solid.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <title>Excellence Academy</title>
 </head>
 <body>
     <section class="header">
-        <nav>
+        <nav class="navbar">
             <a href="index.html">
-                <img src="Images/logo.png">
+                <img src="images/logo.png">
             </a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="index.html">Courses</a></li>
-                    <li><a href="index.html">Admission</a></li>
+                <ul nav-links__list>
+                    <li class="nav-links__item"><a href="index.html" class="nav-links__link">Home</a></li>
+                    <li class="nav-links__item"><a href="about.html" class="nav-links__link">About</a></li>
+                    <li class="nav-links__item"><a href="index.html" class="nav-links__link">Courses</a></li>
+                    <li class="nav-links__item"><a href="index.html" class="nav-links__link">Admission</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-
         </nav>                  
-        <div class="text-box">
-            <h1>Be your best</h1>
-            <p>
+        <div class="hero-text">
+            <h1 class="hero-text__heading">Be your best</h1>
+            <p class="hero-text__copy">
             In the most rapidly developing and competitive field of technology, Excellence University <br>creates a challenging and engaging environment
             </p>
             <a href class="hero-btn">Enroll Now</a>
-        
-        </div>  
+         </div>  
+    </section>
+    <section class="footer">
+        <h4 class="footer__heading">About Us</h4>
+        <p class="footer__copy">Excellence University is a leading Educational institution based out of Delhi. The University has established itself as a high quality education provider<br> with prime focus on holistic learning and imbibing competitive abilities in students.</p>
+        <div class="footer__icons">
+            <i class="fa fa-facebook"</i>
+            <i class="fa fa-twitter"</i>
+            <i class="fa fa-instagram"</i>
+            <i class="fa fa-linkedin"</i>
+        </div>
     </section>  
     
-    <!----Java script to toggle menu----->
+    <!----Java script to toggle menu----- >
     <script>
         var navLinks = document.getElementById("navLinks");
         function showMenu(){
@@ -46,10 +57,6 @@
         function hideMenu(){
             navLinks.style.display = "none";
         }
-
     </script>
-
-    
-
-</body>
+</body
 </html>
