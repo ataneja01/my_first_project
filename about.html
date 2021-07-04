@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Excellence University></title>
-        <link rel="stylesheet" href="style.css">     
+        <link rel="stylesheet" href="style.css">
     </head>
     <body> 
         <section class="aboutus-header">
@@ -13,7 +13,7 @@
                 </a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul lass="nav-links__list">
+                    <ul class="nav-links__list">
                         <li class="nav-links__item"><a href="index.html" class="nav-links__link">Home</a></li>
                         <li class="nav-links__item"><a href="about.html" class="nav-links__link">About</a></li>
                         <li class="nav-links__item"><a href="index.html" class="nav-links__link">Courses</a></li>
@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>                  
+            </nav>                    
             <h1 class="heading-primary">About Us</h1>
         </section>  
         <div class="aboutus-page">
@@ -38,8 +38,8 @@
                     </div>
                     <div class="about-col">
                         <h2 class="para-title">World's largest university</h2>
-                        <p class=para-copy>Every individual has the potential to create change, whether in their life, their community, or the world. The transformative power of education is what unlocks that potential. Yet, access to high-quality education has been a privilege of the few. From the tried and true to the leading edge. From “for some” to “for all.” By opening the classroom through online learning, edX empowers millions of learners to unlock their potential and become changemakers.</p>
-                        <a href="" class="hero-btn hero-btn--color-red">Explore now</a>
+                        <p class="para-copy">Every individual has the potential to create change, whether in their life, their community, or the world. The transformative power of education is what unlocks that potential. Yet, access to high-quality education has been a privilege of the few. From the tried and true to the leading edge. From “for some” to “for all.” By opening the classroom through online learning, edX empowers millions of learners to unlock their potential and become changemakers.</p>
+                        <a href="index.html" class="hero-btn hero-btn--red">Explore now</a>
                     </div>
                 </div>   
             </section>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="about-col">
                         <h2 class="para-title">To transform education system</h2>
-                        <p class=para-copy>Every individual has the potential to create change, whether in their life, their community, or the world. The transformative power of education is what unlocks that potential. Yet, access to high-quality education has been a privilege of the few. From the tried and true to the leading edge. From “for some” to “for all.” By opening the classroom through online learning, edX empowers millions of learners to unlock their potential and become changemakers.</p>
+                        <p class="para-copy">Every individual has the potential to create change, whether in their life, their community, or the world. The transformative power of education is what unlocks that potential. Yet, access to high-quality education has been a privilege of the few. From the tried and true to the leading edge. From “for some” to “for all.” By opening the classroom through online learning, edX empowers millions of learners to unlock their potential and become changemakers.</p>
                     </div>        
                  </div>   
             </section>
@@ -62,11 +62,21 @@
             <h4 class="footer__heading">About Us</h4>
             <p class="footer__copy">Excellence University is a leading Educational institution based out of Delhi. The University has established itself as a high quality education provider<br> with prime focus on holistic learning and imbibing competitive abilities in students.</p>
             <div class="footer__icons">
-                <i class="fa fa-facebook"</i>
-                <i class="fa fa-twitter"</i>
-                <i class="fa fa-instagram"</i>
-                <i class="fa fa-linkedin"</i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
             </div>
-        </section>   
+        </section>  
+        
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.display = "block";
+            }
+            function hideMenu(){
+                navLinks.style.display = "none";
+            }
+        </script>    
     </body>
 </html>

@@ -16,11 +16,11 @@
     <section class="header">
         <nav class="navbar">
             <a href="index.html">
-                <img src="images/logo.png">
+                <img class="logo" src="images/logo.png">
             </a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul nav-links__list>
+                <ul class="nav-links__list">
                     <li class="nav-links__item"><a href="index.html" class="nav-links__link">Home</a></li>
                     <li class="nav-links__item"><a href="about.html" class="nav-links__link">About</a></li>
                     <li class="nav-links__item"><a href="index.html" class="nav-links__link">Courses</a></li>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>                  
+        </nav>              
         <div class="hero-text">
             <h1 class="hero-text__heading">Be your best</h1>
             <p class="hero-text__copy">
@@ -48,7 +48,6 @@
         </div>
     </section>  
     
-    <!----Java script to toggle menu----- >
     <script>
         var navLinks = document.getElementById("navLinks");
         function showMenu(){
