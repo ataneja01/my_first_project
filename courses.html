@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Excellence University></title>
+        <link rel="stylesheet" href="style.css">  
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital@1&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+           
+    </head>
+    <body> 
+        <section class="aboutus-header">
+            <nav class="navbar">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png">
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul lass="nav-links__list">
+                        <li class="nav-links__item"><a href="index.html" class="nav-links__link">Home</a></li>
+                        <li class="nav-links__item"><a href="about.html" class="nav-links__link">About</a></li>
+                        <li class="nav-links__item"><a href="courses.html" class="nav-links__link">Courses</a></li>
+                        <li class="nav-links__item"><a href="index.html" class="nav-links__link">Admission</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>                  
+            <h1 class="heading-primary">Our Courses</h1>
+        </section>  
+        <section class="content-section">
+            <div class="courses-cards">
+                <div class="switcher rounded-tabs" id="plan-selection">
+                    <button class="switcher-col rounded-tabs-link current-tab selectButton" id="price-annually" data-plan = "annual" value="annual" type="button">Annnual billing</button>
+                    <button class="switcher-col rounded-tabs-link selectButton" id="price-monthly" data-plan = "monthly" value="monthly" type="button">Monthly billing</button>
+                </div>
+            </div>
+            <div class="about-row--center-align">
+                <div class="course1 about-col">
+                    <div class="card">
+                        <div class="buy-card-header">
+                            <h3 class="para-title">Data Analytics</h3>
+                            <p class=para-copy>Improve your data analysis skills, business acumen and communication ability. Graduates have sought after transferable skills and go into jobs in the financial sector and accountancy.</p>
+                        </div>
+                        <div class="buy-card-body">
+                            <div class="buy-body-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <p class="price-text">first year</p>
+                                </div>
+                                <div class="price price-right-align">€500.00
+                                </div>
+                            </div>
+                            <div class="buy-body-second-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <P>second year</P>
+                                </div>
+                                <div class="price-right-align">€400.00
+                                </div>
+                            </div>
+                             <div class="buy-body-third-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <a class="nav-links__link nav-links__link--color-red" href="index.html">Request demo</a>
+                                </div>
+                                <div class="price-right-align">
+                                    <a href="index.html" class="hero-btn hero-btn--red hero-btn--rounded">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="course2 about-col">
+                    <div class="card">
+                        <div class="buy-card-header">
+                            <h3 class="para-title">Accounting and Finance</h3>
+                            <p class=para-copy>Take your ambitions further with this CIMA and ACCA accredited MSc in Accounting and Finance. Graduates are exempted from taking some CIMA and ACCA exam papers.</p>
+                        </div>
+                        <div class="buy-card-body">
+                            <div class="buy-body-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <p class="price-text">first year</p>
+                                </div>
+                                <div class="price price-right-align">€600.00
+                                </div>
+                            </div>
+                            <div class="buy-body-second-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <P>second year</P>
+                                </div>
+                                <div class="price-right-align">€500.00
+                                </div>
+                            </div>
+                             <div class="buy-body-third-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <a class="nav-links__link nav-links__link--color-red" href="index.html">Request demo</a>
+                                </div>
+                                <div class="price-right-align">
+                                    <a href="index.html" class="hero-btn hero-btn--red hero-btn--rounded">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course1 about-col">
+                    <div class="card">
+                        <div class="buy-card-header">
+                            <h3 class="para-title">Animation</h3>
+                            <p class=para-copy>Develop creative and technical abilities in character animation, visual storytelling, compositing and editing on this degree course and go into jobs in the animation field..</p>
+                        </div>
+                        <div class="buy-card-body">
+                            <div class="buy-body-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <p class="price-text">first year</p>
+                                </div>
+                                <div class="price price-right-align">€700.00
+                                </div>
+                            </div>
+                            <div class="buy-body-second-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <P>second year</P>
+                                </div>
+                                <div class="price-right-align">€600.00
+                                </div>
+                            </div>
+                             <div class="buy-body-third-row">
+                                <div class="buy-page-text text-hardness-low">
+                                    <a class="nav-links__link nav-links__link--color-red" href="index.html">Request demo</a>
+                                </div>
+                                <div class="price-right-align">
+                                    <a href="inndex.html" class="hero-btn hero-btn--red hero-btn--rounded">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="footer">
+            <h4 class="footer__heading">About Us</h4>
+            <p class="footer__copy">Excellence University is a leading Educational institution based out of Delhi. The University has established itself as a high quality education provider<br> with prime focus on holistic learning and imbibing competitive abilities in students.</p>
+            <div class="footer_icons">
+                <i class="fab fa-facebook style-icon"></i>
+                <i class="fab fa-twitter style-icon"></i>
+                <i class="fab fa-instagram style-icon"></i>
+                <i class="fab fa-linkedin style-icon"></i>
+                    
+            </div>
+        </section>  
+        
+         <script>
+        const allMatchingElementsText= document.querySelectorAll(".buy-page-text .price-text");
+        const allMatchingElementsPrice= document.querySelectorAll(".price");
+        const secondYearPrice= document.querySelectorAll(".buy-body-second-row"); 
+        document.getElementById("plan-selection").addEventListener("click", changeContentAsPerSelectedPlan);
+        function changeContentAsPerSelectedPlan(){
+		console.log(event);	
+		var planType = event.target.getAttribute("data-plan");	
+		document.querySelectorAll(".selectButton").forEach((x) => {x.classList.remove("current-tab")});
+		event.target.classList.add("current-tab");
+		if(planType == "monthly") {
+            allMatchingElementsText.forEach((matchingElement) => {
+                 matchingElement.innerHTML = "per month";
+}); 
+            allMatchingElementsPrice[0].innerHTML = "€49.00";
+            allMatchingElementsPrice[1].innerHTML = "€59.00";
+            allMatchingElementsPrice[2].innerHTML = "€69.00";
+            secondYearPrice.forEach((matchingElement1) => {
+                 matchingElement1.style.display= "none";
+}); 
+}
+		else if(planType == "annual"){
+            allMatchingElementsText.forEach((matchingElement) => {
+                matchingElement.innerHTML = "per year";
+});
+            allMatchingElementsPrice[0].innerHTML = "€500.00";
+            allMatchingElementsPrice[1].innerHTML = "€600.00";
+            allMatchingElementsPrice[2].innerHTML = "€700.00";
+            secondYearPrice.forEach((matchingElement) => {
+                 matchingElement.style.display= "flex";
+});
+}		
+	   }
+       </script>
+</body
+</html>
