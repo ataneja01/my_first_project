@@ -97,8 +97,6 @@
   display: none;
 }
 
-
-
 /* ------------about us page----- */
 
 .aboutus-header {
@@ -252,7 +250,7 @@
   flex-direction: column;
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(39,40,44,.2);
+  border-color: rgba(39, 40, 44, 0.2);
   box-sizing: border-box;
   flex-wrap: wrap;
   background-color: #f7f9fb;
