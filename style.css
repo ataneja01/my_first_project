@@ -148,7 +148,6 @@
 .about-col {
   flex-basis: 50%;
   padding: 32px 16px 0;
-
 }
 
 .para-title {
@@ -183,8 +182,6 @@
   color: #fff;
 }
 
-
-
 .footer {
   width: 100%;
   text-align: center;
@@ -206,7 +203,7 @@
 /* ------------courses page----- */
 
 .content-section {
-  padding: 4% 4%;
+  padding: 4%;
 }
 
 .switcher {
@@ -230,27 +227,27 @@
   background-color: #2a2c2c;
 }
 
-.rounded-tabs-link{
-padding: 8px 24px;
-    border-radius: 200px;
-    border-width: 0;
-    background-color: transparent;
-    color: #fff;
+.rounded-tabs-link {
+  padding: 8px 24px;
+  border-radius: 200px;
+  border-width: 0;
+  background-color: transparent;
+  color: #fff;
 }
 
-.current-tab{
+.current-tab {
   background-color: #b8cdda;
   color: #2a2c2c;
 }
 
-.about-row--center-align{
+.about-row--center-align {
   display: flex;
   text-align: center;
   margin-top: 32px;
   margin-bottom: 32px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   border-width: 1px;
@@ -259,105 +256,103 @@ padding: 8px 24px;
   box-sizing: border-box;
   flex-wrap: wrap;
   background-color: #f7f9fb;
-  
 }
 
-.buy-card-header{
+.buy-card-header {
   padding: 24px 32px;
   box-sizing: border-box;
 }
-.buy-card-body{
+
+.buy-card-body {
   flex-basis: 50%;
   border-top-width: 1px;
   border-top-style: solid;
   box-sizing: border-box;
   padding: 24px 32px;
 }
-.buy-body-row{
+
+.buy-body-row {
   display: flex;
   align-items: baseline;
 }
-.buy-body-second-row{
-  display: flex;
-  padding-top: 24px; 
-}
 
-.buy-body-third-row{
+.buy-body-second-row {
   display: flex;
   padding-top: 24px;
 }
 
-.price-right-align{
+.buy-body-third-row {
+  display: flex;
+  padding-top: 24px;
+}
+
+.price-right-align {
   margin-left: auto;
 }
 
-.text-hardness-low{
-font-size: 12px;
-font-weight: 400;
-color: rgba(39,40,44,.7);
+.text-hardness-low {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(39, 40, 44, 0.7);
 }
 
 .hero-btn--rounded {
-  
   padding: 5px 20px;
   border-radius: 24px;
-  
 }
-.nav-links__link--color-red{
 
-
-color: #f44336;
+.nav-links__link--color-red {
+  color: #f44336;
 }
 
 @media (max-width: 700px) {
   .about-row--center-align {
-    
     flex-direction: column;
   }
 }
-  .style-icons{
-    color: #f44336;
-    margin: 0 12px;
+
+.style-icons {
+  color: #f44336;
+  margin: 0 12px;
+  cursor: pointer;
+  padding: 16px 0;
+}
+
+@media (max-width: 700px) {
+  .hero-text__heading {
+    font-size: 20px;
+  }
+
+  .nav-links__item {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 1;
+    transition: 0.5s;
+    display: none;
+  }
+
+  .navbar .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
     cursor: pointer;
-    padding: 16px 0;
   }
 
-
-  @media (max-width: 700px) {
-    .hero-text__heading {
-      font-size: 20px;
-    }
-  
-    .nav-links__item {
-      display: block;
-    }
-  
-    .nav-links {
-      position: absolute;
-      background: #f44336;
-      height: 100vh;
-      width: 200px;
-      top: 0;
-      right: 0;
-      text-align: left;
-      z-index: 1;
-      transition: 0.5s;
-      display: none;
-    }
-  
-    .navbar .fa {
-      display: block;
-      color: #fff;
-      margin: 10px;
-      font-size: 22px;
-      cursor: pointer;
-    }
-  
-    .nav-links__list {
-      padding: 30px;
-    }
-
-    .about-row {
-      flex-direction: column;
-    }
+  .nav-links__list {
+    padding: 30px;
   }
+
+  .about-row {
+    flex-direction: column;
+  }
+}

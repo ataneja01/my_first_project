@@ -33,8 +33,8 @@
         <section class="content-section">
             <div class="courses-cards">
                 <div class="switcher rounded-tabs" id="plan-selection">
-                    <button class="switcher-col rounded-tabs-link current-tab selectButton" id="price-annually" data-plan = "annual" value="annual" type="button">Annnual billing</button>
-                    <button class="switcher-col rounded-tabs-link selectButton" id="price-monthly" data-plan = "monthly" value="monthly" type="button">Monthly billing</button>
+                    <button class="switcher-col rounded-tabs-link current-tab selectButton" id="price-annually" data-plan="annual" value="annual" type="button">Annual billing</button>
+                    <button class="switcher-col rounded-tabs-link selectButton" id="price-monthly" data-plan="monthly" value="monthly" type="button">Monthly billing</button>
                 </div>
             </div>
             <div class="about-row--center-align">
@@ -42,7 +42,7 @@
                     <div class="card">
                         <div class="buy-card-header">
                             <h3 class="para-title">Data Analytics</h3>
-                            <p class=para-copy>Improve your data analysis skills, business acumen and communication ability. Graduates have sought after transferable skills and go into jobs in the financial sector and accountancy.</p>
+                            <p class="para-copy">Improve your data analysis skills, business acumen and communication ability. Graduates have sought after transferable skills and go into jobs in the financial sector and accountancy.</p>
                         </div>
                         <div class="buy-card-body">
                             <div class="buy-body-row">
@@ -74,7 +74,7 @@
                     <div class="card">
                         <div class="buy-card-header">
                             <h3 class="para-title">Accounting and Finance</h3>
-                            <p class=para-copy>Take your ambitions further with this CIMA and ACCA accredited MSc in Accounting and Finance. Graduates are exempted from taking some CIMA and ACCA exam papers.</p>
+                            <p class="para-copy">Take your ambitions further with this CIMA and ACCA accredited MSc in Accounting and Finance. Graduates are exempted from taking some CIMA and ACCA exam papers.</p>
                         </div>
                         <div class="buy-card-body">
                             <div class="buy-body-row">
@@ -107,7 +107,7 @@
                     <div class="card">
                         <div class="buy-card-header">
                             <h3 class="para-title">Animation</h3>
-                            <p class=para-copy>Develop creative and technical abilities in character animation, visual storytelling, compositing and editing on this degree course and go into jobs in the animation field..</p>
+                            <p class="para-copy">Develop creative and technical abilities in character animation, visual storytelling, compositing and editing on this degree course and go into jobs in the animation field..</p>
                         </div>
                         <div class="buy-card-body">
                             <div class="buy-body-row">
@@ -129,7 +129,7 @@
                                     <a class="nav-links__link nav-links__link--color-red" href="index.html">Request demo</a>
                                 </div>
                                 <div class="price-right-align">
-                                    <a href="inndex.html" class="hero-btn hero-btn--red hero-btn--rounded">Buy</a>
+                                    <a href="index.html" class="hero-btn hero-btn--red hero-btn--rounded">Buy</a>
                                 </div>
                             </div>
                         </div>
@@ -144,40 +144,39 @@
                 <i class="fab fa-twitter style-icon"></i>
                 <i class="fab fa-instagram style-icon"></i>
                 <i class="fab fa-linkedin style-icon"></i>
-                    
             </div>
         </section>  
         
          <script>
-        const allMatchingElementsText= document.querySelectorAll(".buy-page-text .price-text");
-        const allMatchingElementsPrice= document.querySelectorAll(".price");
-        const secondYearPrice= document.querySelectorAll(".buy-body-second-row"); 
+        const allCoursesDuration= document.querySelectorAll(".buy-page-text .price-text");
+        const allCoursesPrice= document.querySelectorAll(".price");
+        const allCoursesSecondYearPrice= document.querySelectorAll(".buy-body-second-row"); 
         document.getElementById("plan-selection").addEventListener("click", changeContentAsPerSelectedPlan);
         function changeContentAsPerSelectedPlan(){
-		console.log(event);	
-		var planType = event.target.getAttribute("data-plan");	
-		document.querySelectorAll(".selectButton").forEach((x) => {x.classList.remove("current-tab")});
-		event.target.classList.add("current-tab");
-		if(planType == "monthly") {
-            allMatchingElementsText.forEach((matchingElement) => {
-                 matchingElement.innerHTML = "per month";
+		const planType = event.target.getAttribute("data-plan");	
+		if (event.target.classList.contains("selectButton")){
+            document.querySelectorAll(".selectButton").forEach((plan) => {plan.classList.remove("current-tab")});
+            event.target.classList.add("current-tab");}
+		if (planType === "monthly") {
+            allCoursesDuration.forEach((duration) => {
+                 duration.innerHTML = "per month";
 }); 
-            allMatchingElementsPrice[0].innerHTML = "€49.00";
-            allMatchingElementsPrice[1].innerHTML = "€59.00";
-            allMatchingElementsPrice[2].innerHTML = "€69.00";
-            secondYearPrice.forEach((matchingElement1) => {
-                 matchingElement1.style.display= "none";
+            allCoursesPrice[0].innerHTML = "€49.00";
+            allCoursesPrice[1].innerHTML = "€59.00";
+            allCoursesPrice[2].innerHTML = "€69.00";
+            allCoursesSecondYearPrice.forEach((price) => {
+                 price.style.display= "none";
 }); 
 }
-		else if(planType == "annual"){
-            allMatchingElementsText.forEach((matchingElement) => {
-                matchingElement.innerHTML = "per year";
+		else if (planType ==="annual"){
+            allCoursesDuration.forEach((duration) => {
+                duration.innerHTML = "per year";
 });
-            allMatchingElementsPrice[0].innerHTML = "€500.00";
-            allMatchingElementsPrice[1].innerHTML = "€600.00";
-            allMatchingElementsPrice[2].innerHTML = "€700.00";
-            secondYearPrice.forEach((matchingElement) => {
-                 matchingElement.style.display= "flex";
+            allCoursesPrice[0].innerHTML = "€500.00";
+            allCoursesPrice[1].innerHTML = "€600.00";
+            allCoursesPrice[2].innerHTML = "€700.00";
+            allCoursesSecondYearPrice.forEach((price) => {
+                 price.style.display= "flex";
 });
 }		
 	   }
