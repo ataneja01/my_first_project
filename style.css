@@ -303,10 +303,185 @@
   color: #f44336;
 }
 
-@media (max-width: 700px) {
-  .about-row--center-align {
-    flex-direction: column;
-  }
+/* ------------admission page----- */
+
+.admission-body {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.content {
+  margin-top: 16px;
+  padding: 2% 4%;
+}
+
+.search-area {
+  display: flex;
+  background-color: #fff;
+  padding: 16px 24px 30px 24px;
+}
+
+.dropdown {
+  flex-basis: 25%;
+}
+
+.text-search {
+  flex-basis: 50%;
+  margin-left: 12px;
+}
+
+.button1 {
+  flex-basis: 25%;
+}
+
+.search-area-element {
+  margin-top: 16px;
+  margin-right: 12px;
+  position: relative;
+}
+
+.semester-dropdown {
+  padding: 16px 40px 16px 12px;
+  width: 100%;
+  appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+  background-repeat: no-repeat;
+  background-position-x: 264px;
+  background-position-y: 14px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 12px;
+}
+
+.hero-btn--search {
+  width: 100%;
+  flex-basis: 25%;
+  margin-top: 16px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+}
+
+.search-form {
+  flex-basis: 25%;
+  background: #fff;
+  padding: 16px 24px;
+  margin-right: 12px;
+}
+
+.search-result {
+  flex-basis: 75%;
+  margin-top: -8px;
+  margin-left: 12px;
+}
+
+.filter-top {
+  display: flex;
+}
+
+.column-heading {
+  flex-basis: 50%;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.reset {
+  flex-basis: 50%;
+  text-align: right;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #e42635;
+  cursor: pointer;
+}
+
+.group {
+  border-style: none;
+  margin-top: 16px;
+}
+
+.group-option-radio {
+  margin-top: 12px;
+}
+
+.input-radio {
+  visibility: hidden;
+}
+
+.radio-label {
+  border: 1px solid rgba(0, 0, 0, 0.67);
+  padding: 16px 0;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.group-option-radio {
+  display: flex;
+  margin-left: -13px;
+}
+
+.radio-label {
+  width: 100%;
+}
+
+.group-label {
+  font-weight: 500;
+}
+
+.row {
+  margin-top: 12px;
+}
+
+.horizontalLine {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 16px -16px;
+}
+
+.level-checkbox {
+  margin-right: 16px;
+}
+
+.fas {
+  float: right;
+  cursor: pointer;
+}
+
+.searchresult-card {
+  background: #fff;
+  margin-top: 8px;
+  padding: 16px;
+}
+
+.font-light-color {
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.resultcard-content {
+  display: flex;
+  margin-top: 16px;
+}
+
+.resultcard-content-col {
+  flex-basis: 50%;
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+.dropdown-label {
+  position: absolute;
+  left: 12px;
+  padding: 0 2px;
+  top: -9px;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.67);
+  background-color: #fff;
 }
 
 .style-icons {
@@ -314,6 +489,12 @@
   margin: 0 12px;
   cursor: pointer;
   padding: 16px 0;
+}
+
+@media (max-width: 700px) {
+  .about-row--center-align {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 700px) {
