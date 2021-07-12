@@ -198,6 +198,124 @@
   font-size: 12px;
 }
 
+/* ------------courses page----- */
+
+.content-section {
+  padding: 4%;
+}
+
+.switcher {
+  display: inline-flex;
+}
+
+.courses-cards {
+  text-align: center;
+}
+
+.switcher-col {
+  margin: 8px;
+  padding: 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.rounded-tabs {
+  padding: 8px;
+  border-radius: 200px;
+  background-color: #2a2c2c;
+}
+
+.rounded-tabs-link {
+  padding: 8px 24px;
+  border-radius: 200px;
+  border-width: 0;
+  background-color: transparent;
+  color: #fff;
+}
+
+.current-tab {
+  background-color: #b8cdda;
+  color: #2a2c2c;
+}
+
+.about-row--center-align {
+  display: flex;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(39, 40, 44, 0.2);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  background-color: #f7f9fb;
+}
+
+.buy-card-header {
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+.buy-card-body {
+  flex-basis: 50%;
+  border-top-width: 1px;
+  border-top-style: solid;
+  box-sizing: border-box;
+  padding: 24px 32px;
+}
+
+.buy-body-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.buy-body-second-row {
+  display: flex;
+  padding-top: 24px;
+}
+
+.buy-body-third-row {
+  display: flex;
+  padding-top: 24px;
+}
+
+.price-right-align {
+  margin-left: auto;
+}
+
+.text-hardness-low {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(39, 40, 44, 0.7);
+}
+
+.hero-btn--rounded {
+  padding: 5px 20px;
+  border-radius: 24px;
+}
+
+.nav-links__link--color-red {
+  color: #f44336;
+}
+
+@media (max-width: 700px) {
+  .about-row--center-align {
+    flex-direction: column;
+  }
+}
+
+.style-icons {
+  color: #f44336;
+  margin: 0 12px;
+  cursor: pointer;
+  padding: 16px 0;
+}
+
 @media (max-width: 700px) {
   .hero-text__heading {
     font-size: 20px;
