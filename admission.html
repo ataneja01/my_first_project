@@ -3,12 +3,14 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Excellence University></title>
-        <link rel="stylesheet" href="style.css">  
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admission.css">   
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital@1&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/admission.js"></script>
     </head>
     <body class="admission-body"> 
         <section class="aboutus-header">
@@ -41,8 +43,10 @@
                          </div>
                          <div class="text-search search-area-element">
                              <input type="search" id="freeText" name="freeText" class="search-input" placeholder="subject/course">
-                            </div>
-                        <button class="hero-btn hero-btn--red hero-btn--search" type="submit" id="search-btn">Find courses</button>
+                        </div>
+                        <div class = "search-btn-wrapper">
+                            <button class="hero-btn hero-btn--red hero-btn--search" type="submit" id="search-btn">Find courses</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -55,51 +59,56 @@
                     <fieldset class="group">
                         <legend class="group-label">Both courses and programs</legend>
                         <div class="group-option-radio">
-                            <input type="radio" id="typeboth" name="type" value="both" class="input-radio">
+                            <input type="radio" id="typeboth" name="type" value="both" checked class="input-radio" checked>
                             <label for="typeboth" class="radio-label">Both</label>
-                            <input type="radio" id="typecourses" name="type" value="courses" class="input-radio"> 
+                            <input type="radio" id="typecourses" name="type" value="course" class="input-radio"> 
                             <label for="typecourses" class="radio-label">Courses</label>
-                            <input type="radio" id="typeprograms" name="type" value="programs" class="input-radio">
+                            <input type="radio" id="typeprograms" name="type" value="program" class="input-radio">
                             <label for="typeprograms" class="radio-label">Programs</label>
                         </div>
                     </fieldset>
                      <div class="horizontalLine"></div>
                      <fieldset class="group">
                         <legend class="group-label">Course level</legend>
-                        <div class="row">
-                            <div class="checkbox">
-                                <input type="checkbox" id="basicLevel" name="basicLevel" class="level-checkbox"> 
-                                <label for="basicLevel">Beginner level</label>
-                                <i class="fas fa-question-circle"></i>
-                            </div>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">Beginner level
+                                <input type="checkbox" id="basicLevel" name="level" value="beginner" class="level-checkbox"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="fas fa-question-circle tooltip">
+                                <span class="tooltiptext">You do not need previous higher education studies but must have successfully completed upper secondary studies.</span>
+                            </i>
                             <div class="tooltip"></div>
                         </div>
-                        <div class="row">
-                            <div class="checkbox">
-                                <input type="checkbox" id="mediumLevel" name="mediumLevel" class="level-checkbox"> 
-                                <label for="mediumLevel">Bachelor's level</label>
-                                <i class="fas fa-question-circle"></i>
-                            </div>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">Bachelor's level
+                                <input type="checkbox" id="mediumLevel" name="level" value="bachelor" class="level-checkbox"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="fas fa-question-circle tooltip">
+                                <span class="tooltiptext">You must have successfully completed upper secondary studies.</span>
+                            </i>
                             <div class="tooltip"></div>
                         </div>
-                        <div class="row">
-                            <div class="checkbox">
-                                <input type="checkbox" id="advancedLevel" name="advancedLevel" class="level-checkbox"> 
-                                <label for="advancedLevel">Master's level</label>
-                                <i class="fas fa-question-circle"></i>
-                            </div>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">Master's level
+                                <input type="checkbox" id="advancedLevel" name="level" value="master" class="level-checkbox"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="fas fa-question-circle tooltip">
+                                    <span class="tooltiptext">Requires a completed bachelor's degree.</span>
+                            </i>
                             <div class="tooltip"></div>
                         </div>
                      </fieldset>
                      <div class="horizontalLine"></div>
                      <fieldset class="group">
                         <legend class="group-label">Pace of study</legend>
-                        <div class="dropdown search-area-element">
-                            <select id="period" class="semester-dropdown" name="period">
-                                <option value="s21" selected>Full-time-100%</option>
-                                <option value="a21">Up to 75%</option>
-                                <option value="a21">Up to 50%</option>
-                                <option value="a21">Up to 25%</option>
+                        <div class="dropdown filter-dropdown ">
+                            <select id="pace-study" class="semester-dropdown" name="pace-study" type="dropdown">
+                                <option value="all" selected>All</option>
+                                <option value="full-time">Full-time-100%</option>
+                                <option value="75">Up to 75%</option>
                             </select>
                             <label for "period" class="dropdown-label">Pace of study</label>
                         </div>
@@ -116,64 +125,15 @@
                     <i class="fab fa-instagram style-icon"></i>
                     <i class="fab fa-linkedin style-icon"></i>
                 </div>
-            </section>  
-
-            <script>
-            $(document).ready(function(){
-                loadData();
-				var courseData;
-                function loadData(){
-                    var data = getData();
-                    courseData = data;
-                    populateUI(data);
-					}
-                    function getData(){
-                        var courses = [];
-						courses.push({id:1, title: "Masters Program in Computer Science", period: "Summer 2021", level: "Master's", subjectArea: "Computer Science", paceOfStudy: "Full-time", teachingForm: "Program", applicationCode: "EUA-123"});						
-						courses.push({id:2, title: "Masters Program in Software Engineering", period: "Summer 2021", level: "Master's", subjectArea: "Computer Science", paceOfStudy: "Full-time", teachingForm: "Program", applicationCode: "EUA-124"});
-						courses.push({id:3, title: "Masters Program in Telecommunication Systems", period: "Autumn 2021", level: "Master's", subjectArea: "Computer Science", paceOfStudy: "50%", teachingForm: "Program", applicationCode: "EUA-125"});
-						courses.push({id:2, title: "User Experience Design", period: "Summer 2021", level: "Bachelor's", subjectArea: "Computer Science", paceOfStudy: "75%", teachingForm: "Course", applicationCode: "EUA-126"});
-                        courses.push({id:1, title: "Evolutionary Biology", period: "Autumn 2021", level: "Master's", subjectArea: "Biology", paceOfStudy: "Full-time", teachingForm: "Program", applicationCode: "EUA-127"});
-                        courses.push({id:1, title: "Cell and Developmental Biology", period: "Autumn 2021", level: "Bachelor's", subjectArea: "Biology", paceOfStudy: "Full-time", teachingForm: "Program", applicationCode: "EUA-128"});
-                        courses.push({id:1, title: "Human Physiology", period: "Summer 2021", level: "Beginner", subjectArea: "Biology", paceOfStudy: "50%", teachingForm: "Course", applicationCode: "EUA-129"});
-						return courses;
-                    }
-                    function populateUI(data){
-                        $("#search-result").empty();
-						data.forEach(course => {
-                            var html = `<div class="searchresult-card">
-                                <div class="resultcard-header">
-                                    <h3 class="column-heading">${course.title}</h3>
-                                    </div>
-                                    <div class="resultcard-content font-light-color">
-                                        <div class="resultcard-content-col">
-                                            <p><span class="subtitle">Period: </span>${course.period}</p>
-                                            <p><span class="subtitle">Level: </span>${course.level}</p>
-                                            <p><span class="subtitle">Subject Area: </span>${course.subjectArea}</p>
-                                            </div>
-                                            <div class="resultcard-content-col">
-                                                <p><span class="subtitle">Pace of study: </span>${course.paceOfStudy}</p>
-                                                <p><span class="subtitle">Teaching form: </span>${course.teachingForm}</p>
-                                                <p><span class="subtitle">Application code: </span>${course.applicationCode}</p>
-                                                </div>
-                                            </div>
-                                    </div>`;
-                                    $("#search-result").append(html);
-                                });
-                            }					
-					$("#search").submit(function( event ) {
-						var searchText = $("#freeText").val();  
-                        var semester = $("#period").val();
-                        var filteredList = [];
-                        courseData.forEach(course => {
-                            if (((course.period.toUpperCase().indexOf(semester.toUpperCase()) != -1)) && ((course.subjectArea.toUpperCase().indexOf(searchText.toUpperCase()) != -1))){
-                                filteredList.push(course);
-                            }
-                        });  
-						populateUI(filteredList);
-						event.preventDefault();
-                    }); 
-});
-            </script> 
-    </body
+            </section>
+        </body>
 </html>
+
+
+
+
+
+
+
+
+                  

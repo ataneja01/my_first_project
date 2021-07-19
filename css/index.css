@@ -1,0 +1,20 @@
+.hero-text {
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .hero-text__heading {
+    font-size: 60px;
+  }
+  
+  .hero-text__copy {
+    font-size: 15px;
+    margin: 10px 0 40px;
+  }
+  

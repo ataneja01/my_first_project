@@ -1,0 +1,343 @@
+.admission-body {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  
+  .content {
+    margin-top: 16px;
+    padding: 2% 4%;
+  }
+  
+  .search-area {
+    display: flex;
+    background-color: #fff;
+    padding: 16px 24px 30px 24px;
+  }
+  
+  .dropdown {
+    flex-basis: 25%;
+  }
+  
+  .text-search {
+    flex-basis: 50%;
+    margin-left: 12px;
+  }
+  
+  .button1 {
+    flex-basis: 25%;
+  }
+  
+  .search-area-element {
+    margin-top: 16px;
+    margin-right: 12px;
+    position: relative;
+  }
+  
+  .semester-dropdown {
+    padding: 16px 40px 16px 12px;
+    width: 100%;
+    appearance: none;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+    background-repeat: no-repeat;
+    background-position-x: 260px;
+    background-position-y: 17px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 16px 12px;
+  }
+  
+  .search-btn-wrapper {
+    flex-basis: 25%;
+    margin-top: 16px;
+    margin-left: 12px;
+    
+  }
+  
+  .hero-btn--search {
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    outline: none;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .search-form {
+    flex-basis: 25%;
+    background: #fff;
+    padding: 16px 24px;
+    margin-right: 12px;
+  }
+  
+  .search-result {
+    flex-basis: 75%;
+    margin-top: -8px;
+    margin-left: 12px;
+  }
+  
+  .filter-top {
+    display: flex;
+  }
+  
+  .column-heading {
+    flex-basis: 50%;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .reset {
+    flex-basis: 50%;
+    text-align: right;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #e42635;
+    cursor: pointer;
+  }
+  
+  .group {
+    border-style: none;
+    margin-top: 16px;
+  }
+  
+  .group-option-radio {
+    margin-top: 12px;
+  }
+  
+  .input-radio {
+    visibility: hidden;
+  }
+  
+  .radio-label {
+    border: 1px solid rgba(0, 0, 0, 0.67);
+    padding: 16px 0;
+    text-align: center;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .group-option-radio {
+    display: flex;
+    margin-left: -13px;
+  }
+  
+  .radio-label {
+    width: 100%;
+  }
+  
+  .group-label {
+    font-weight: 500;
+  }
+  
+  .checkbox-row {
+    margin-top: 12px;
+    position: relative;
+  }
+  
+  .horizontalLine {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 16px -16px;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+    margin-top: 16px;
+  }
+  
+  .fas {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .searchresult-card {
+    background: #fff;
+    margin-top: 8px;
+    padding: 16px;
+  }
+  
+  .font-light-color {
+    color: rgba(0, 0, 0, 0.67);
+  }
+  
+  .resultcard-content {
+    display: flex;
+    margin-top: 16px;
+  }
+  
+  .resultcard-content-col {
+    flex-basis: 50%;
+  }
+  
+  .subtitle {
+    font-weight: 600;
+  }
+  
+  .dropdown-label {
+    position: absolute;
+    left: 12px;
+    padding: 0 2px;
+    top: -9px;
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.67);
+    background-color: #fff;
+  }
+  
+  .style-icons {
+    color: #f44336;
+    margin: 0 12px;
+    cursor: pointer;
+    padding: 16px 0;
+  }
+  
+  .image-container {
+    background: url("https://www.universityadmissions.se/images/designsystem/emptystate_no_searchhits.png") no-repeat center content-box;
+    min-height: 193px;
+    background-size: contain;
+  }
+  
+  input[type="radio"]:checked + label {
+    background-color: #f44336;
+    color: #fff;
+  
+  }
+  
+  .tooltip {
+    position: absolute;
+    display: inline-block;
+    bottom: 4px;
+    right: 0;
+  
+  }
+  
+  .tooltip .tooltiptext {
+    top:50%;
+    transform:translateY(-50%);
+    left:100%;
+    margin-left:15px;
+    visibility: hidden;
+    width: 200px;
+    background-color: #ffdada;
+    text-align: center;
+    
+    padding: 10px;
+    color: rgba(0,0,0,.87);
+    font-weight: 400;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  .line-spacing {
+    padding: 2px 0px;
+  }
+  
+  .checkbox {
+    position: relative;
+  }
+  
+  
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #ffdada;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #f44336;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    left: 7px;
+    top: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  @media (max-width: 700px) {
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .search-form {
+      margin-right: 0px;
+    }
+  
+    .search-result {
+      margin-left: 0px;
+      margin-top: 16px;
+    }
+  
+    .search-area {
+      flex-direction: column;
+    }
+  
+    .search-area-element {
+      margin-left: 12px;
+    }
+  
+    .tooltip .tooltiptext {
+      right: 100%;
+      left: revert;
+    }
+  
+    .semester-dropdown {
+      background-position-x: 245px;
+    }
+  
+    .search-btn-wrapper {
+      margin-right: 12px;
+    }
+  }
+  
+  
