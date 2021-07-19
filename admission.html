@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Excellence University></title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/admission.css">   
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital@1&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/admission.js"></script>
+    </head>
+    <body class="admission-body"> 
+        <section class="aboutus-header">
+            <nav class="navbar">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png">
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul lass="nav-links__list">
+                        <li class="nav-links__item"><a href="index.html" class="nav-links__link">Home</a></li>
+                        <li class="nav-links__item"><a href="about.html" class="nav-links__link">About</a></li>
+                        <li class="nav-links__item"><a href="courses.html" class="nav-links__link">Courses</a></li>
+                        <li class="nav-links__item"><a href="index.html" class="nav-links__link">Admission</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>  
+            <h1 class="heading-primary">Search for courses</h1>
+        </section>
+            <form id="search" class="course-search" method="get" action="">
+                <div class="content">
+                    <div class="search-area">
+                        <div class="dropdown search-area-element">
+                            <select id="period" class="semester-dropdown" name="period">
+                                <option value="Summer 2021" selected>Summer 2021</option>
+                                <option value="Autumn 2021">Autumn 2021</option>
+                            </select>
+                            <label for "period" class="dropdown-label">Semester</label>
+                         </div>
+                         <div class="text-search search-area-element">
+                             <input type="search" id="freeText" name="freeText" class="search-input" placeholder="subject/course">
+                        </div>
+                        <div class = "search-btn-wrapper">
+                            <button class="hero-btn hero-btn--red hero-btn--search" type="submit" id="search-btn">Find courses</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <section class="main-content content">
+                <form id="search-form" class="search-form">
+                    <div class="filter-top">
+                        <h2 class="column-heading">Filter</h2>
+                        <button type="button" id="reset" class="reset text-button">Reset</button>
+                    </div>
+                    <fieldset class="group">
+                        <legend class="group-label">Both courses and programs</legend>
+                        <div class="group-option-radio">
+                            <input type="radio" id="typeboth" name="type" value="both" checked class="input-radio" checked>
+                            <label for="typeboth" class="radio-label">Both</label>
+                            <input type="radio" id="typecourses" name="type" value="course" class="input-radio"> 
+                            <label for="typecourses" class="radio-label">Courses</label>
+                            <input type="radio" id="typeprograms" name="type" value="program" class="input-radio">
+                            <label for="typeprograms" class="radio-label">Programs</label>
+                        </div>
+                    </fieldset>
+                     <div class="horizontalLine"></div>
+                     <fieldset class="group">
+                        <legend class="group-label">Course level</legend>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">Beginner level
+                                <input type="checkbox" id="basicLevel" name="level" value="beginner" class="level-checkbox"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="fas fa-question-circle tooltip">
+                                <span class="tooltiptext">You do not need previous higher education studies but must have successfully completed upper secondary studies.</span>
+                            </i>
+                            <div class="tooltip"></div>
+                        </div>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">Bachelor's level
+                                <input type="checkbox" id="mediumLevel" name="level" value="bachelor" class="level-checkbox"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="fas fa-question-circle tooltip">
+                                <span class="tooltiptext">You must have successfully completed upper secondary studies.</span>
+                            </i>
+                            <div class="tooltip"></div>
+                        </div>
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">Master's level
+                                <input type="checkbox" id="advancedLevel" name="level" value="master" class="level-checkbox"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="fas fa-question-circle tooltip">
+                                    <span class="tooltiptext">Requires a completed bachelor's degree.</span>
+                            </i>
+                            <div class="tooltip"></div>
+                        </div>
+                     </fieldset>
+                     <div class="horizontalLine"></div>
+                     <fieldset class="group">
+                        <legend class="group-label">Pace of study</legend>
+                        <div class="dropdown filter-dropdown ">
+                            <select id="pace-study" class="semester-dropdown" name="pace-study" type="dropdown">
+                                <option value="all" selected>All</option>
+                                <option value="full-time">Full-time-100%</option>
+                                <option value="75">Up to 75%</option>
+                            </select>
+                            <label for "period" class="dropdown-label">Pace of study</label>
+                        </div>
+                     </fieldset>
+                    </form>
+                <div class="search-result" id = "search-result"></div>
+            </section>
+            <section class="footer">
+                <h4 class="footer__heading">About Us</h4>
+                <p class="footer__copy">Excellence University is a leading Educational institution based out of Delhi. The University has established itself as a high quality education provider<br> with prime focus on holistic learning and imbibing competitive abilities in students.</p>
+                <div class="footer_icons">
+                    <i class="fab fa-facebook style-icon"></i>
+                    <i class="fab fa-twitter style-icon"></i>
+                    <i class="fab fa-instagram style-icon"></i>
+                    <i class="fab fa-linkedin style-icon"></i>
+                </div>
+            </section>
+        </body>
+</html>
+
+
+
+
+
+
+
+
+                  
